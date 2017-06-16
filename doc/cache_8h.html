@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Simulador de Memória Cache para IOAC: Referência do Arquivo include/cache.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Simulador de Memória Cache para IOAC
+   </div>
+   <div id="projectbrief">Simulador de Memória Cache para IOAC</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#enum-members">Enumerações</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo cache.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Definição da classe <a class="el" href="classCache.html" title="Classe que representa uma cache. ">Cache</a>.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para cache.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="cache_8h__incl.png" border="0" usemap="#include_2cache_8h" alt=""/></div>
+<map name="include_2cache_8h" id="include_2cache_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="cache_8h__dep__incl.png" border="0" usemap="#include_2cache_8hdep" alt=""/></div>
+<map name="include_2cache_8hdep" id="include_2cache_8hdep">
+<area shape="rect" id="node2" href="bancodados_8h.html" title="Arquivo de cabeçalho com a definição de funções para o controle dos dados. " alt="" coords="15,80,163,107"/><area shape="rect" id="node4" href="main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="169,155,266,181"/><area shape="rect" id="node5" href="funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="239,80,398,107"/><area shape="rect" id="node6" href="cache_8cpp.html" title="Implementação da classe Cache. " alt="" coords="423,80,527,107"/><area shape="rect" id="node3" href="bancodados_8cpp.html" title="Arquivo de corpo com a definição de funções para o controle dos dados. " alt="" coords="5,155,144,181"/></map>
+</div>
+</div>
+<p><a href="cache_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBloco.html">Bloco</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que representa um bloco.  <a href="classBloco.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html">Cache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que representa uma cache.  <a href="classCache.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerações</h2></td></tr>
+<tr class="memitem:ab11ccbf3466a11508b9ca1802a312613"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cache_8h.html#ab11ccbf3466a11508b9ca1802a312613">Mapeamentos</a> { <a class="el" href="cache_8h.html#ab11ccbf3466a11508b9ca1802a312613a1e75f6f5c930989a535c3ccd54ac964b">Diretamente</a> = 1, 
+<a class="el" href="cache_8h.html#ab11ccbf3466a11508b9ca1802a312613ae82e935eb78530413eea32c5cf734a86">AssociativoTotal</a>, 
+<a class="el" href="cache_8h.html#ab11ccbf3466a11508b9ca1802a312613ad959f4d9072f37f04d81acac2415e25e">AssociativoParcial</a>
+ }</td></tr>
+<tr class="memdesc:ab11ccbf3466a11508b9ca1802a312613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapeamentos.  <a href="cache_8h.html#ab11ccbf3466a11508b9ca1802a312613">Mais...</a><br /></td></tr>
+<tr class="separator:ab11ccbf3466a11508b9ca1802a312613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab475bc62d305ffe2543785016afe5243"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cache_8h.html#ab475bc62d305ffe2543785016afe5243">Politicas</a> { <a class="el" href="cache_8h.html#ab475bc62d305ffe2543785016afe5243a5826ba1622462591add78db80872480e">Aleatorio</a> = 1, 
+<a class="el" href="cache_8h.html#ab475bc62d305ffe2543785016afe5243a7795ebef271efe70b28f37deb9a07a83">FIFO</a>, 
+<a class="el" href="cache_8h.html#ab475bc62d305ffe2543785016afe5243ae3f64732163226600b64d93cb19a020d">LFU</a>, 
+<a class="el" href="cache_8h.html#ab475bc62d305ffe2543785016afe5243a4ade1425886499333b42f8000cf81f61">LRU</a>
+ }</td></tr>
+<tr class="memdesc:ab475bc62d305ffe2543785016afe5243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Políticas.  <a href="cache_8h.html#ab475bc62d305ffe2543785016afe5243">Mais...</a><br /></td></tr>
+<tr class="separator:ab475bc62d305ffe2543785016afe5243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Definição da classe <a class="el" href="classCache.html" title="Classe que representa uma cache. ">Cache</a>. </p>
+<dl class="section author"><dt>Autor</dt><dd>Dionísio Carvalho (<a href="#" onclick="location.href='mai'+'lto:'+'dio'+'ni'+'sio'+'@n'+'ara'+'co'+'sta'+'.c'+'om.'+'br'; return false;">dioni<span style="display: none;">.nosp@m.</span>sio@<span style="display: none;">.nosp@m.</span>narac<span style="display: none;">.nosp@m.</span>osta<span style="display: none;">.nosp@m.</span>.com.<span style="display: none;">.nosp@m.</span>br</a>) </dd></dl>
+<dl class="section since"><dt>Desde</dt><dd>15/06/2017 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>15/06/2017 </dd></dl>
+</div><h2 class="groupheader">Enumerações</h2>
+<a class="anchor" id="ab11ccbf3466a11508b9ca1802a312613"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="cache_8h.html#ab11ccbf3466a11508b9ca1802a312613">Mapeamentos</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mapeamentos. </p>
+<p>Tipos de mapeamentos de memória. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores enumerados</th></tr><tr><td class="fieldname"><a class="anchor" id="ab11ccbf3466a11508b9ca1802a312613a1e75f6f5c930989a535c3ccd54ac964b"></a>Diretamente&#160;</td><td class="fielddoc">
+<p>Mapeamento direto </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab11ccbf3466a11508b9ca1802a312613ae82e935eb78530413eea32c5cf734a86"></a>AssociativoTotal&#160;</td><td class="fielddoc">
+<p>Totalmente associativo </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab11ccbf3466a11508b9ca1802a312613ad959f4d9072f37f04d81acac2415e25e"></a>AssociativoParcial&#160;</td><td class="fielddoc">
+<p>Parcialmente associativo </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ab475bc62d305ffe2543785016afe5243"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="cache_8h.html#ab475bc62d305ffe2543785016afe5243">Politicas</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Políticas. </p>
+<p>Políticas de substituição de blocos. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores enumerados</th></tr><tr><td class="fieldname"><a class="anchor" id="ab475bc62d305ffe2543785016afe5243a5826ba1622462591add78db80872480e"></a>Aleatorio&#160;</td><td class="fielddoc">
+<p>Aleatória </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab475bc62d305ffe2543785016afe5243a7795ebef271efe70b28f37deb9a07a83"></a>FIFO&#160;</td><td class="fielddoc">
+<p>FIFO - First in, first out </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab475bc62d305ffe2543785016afe5243ae3f64732163226600b64d93cb19a020d"></a>LFU&#160;</td><td class="fielddoc">
+<p>LFU - Least frequently used </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab475bc62d305ffe2543785016afe5243a4ade1425886499333b42f8000cf81f61"></a>LRU&#160;</td><td class="fielddoc">
+<p>LRU - Least recently used </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Junho de 2017 00:16:32 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
