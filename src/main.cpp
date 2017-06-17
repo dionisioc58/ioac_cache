@@ -40,10 +40,17 @@ int main(int argc, char* argv[]) {
 
     int busca;                              /**< Variável para busca da palavra */
 
-    /** < Preenche o conteúdo com valores aleatórios */
+    /**< Preenche o conteúdo com valores aleatórios */
 	for(int i = 0; i < (cache->qtd_blocos * cache->tam_bloco); i++)
 		conteudo[i] = rand() % 5000;
 
+    /**< Executa script, caso seja apontado */
+    if(argc > 1) {
+        cout << "Abrindo arquivo de script..." << endl;
+        execScript(argv[1], cache, conteudo);
+    }
+
+    /**< Menu principal do sistema */
     while(1) {
         switch(showMenu("Simulador de Memória Cache", opcoes, qtde)) { //Exibir o menu
             case 0:     //Sair
@@ -58,7 +65,9 @@ int main(int argc, char* argv[]) {
                 break;
 
             case 2:     //Exibir
-                Exibir(cache, conteudo);
+                ExibirCache(cache, conteudo);
+                parar();
+                ExibirMem(cache, conteudo);
                 break;
 
             case 3:     //Exibir configurações

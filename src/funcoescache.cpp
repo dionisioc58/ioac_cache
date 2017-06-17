@@ -14,7 +14,7 @@ using namespace std;
 * @param[in]	cache Cache
 * @param[in]	conteudo Conteudo
 */
-void Exibir(Cache *cache, int *conteudo) {
+void ExibirCache(Cache *cache, int *conteudo) {
 	cout << "Cache L1" << endl;
 	cout << "Linha - Bloco - Endereço - Conteúdo" << endl;
 
@@ -46,6 +46,14 @@ void Exibir(Cache *cache, int *conteudo) {
 			}
 		}
 	}
+}
+
+/**
+* @brief		Exibe a memória principal
+* @param[in]	cache Cache
+* @param[in]	conteudo Conteudo
+*/
+void ExibirMem(Cache *cache, int *conteudo) {
 	cout << endl << "Memória Principal" << endl;
 	cout << "Bloco - Endereço - Conteúdo" << endl;
 	for(int i = 0; i < cache->qtd_blocos; i++)

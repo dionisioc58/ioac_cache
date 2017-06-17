@@ -24,6 +24,7 @@
     #include <sstream>
     
     #include "cache.h"
+    #include "funcoescache.h"
 
     /**
     * @brief        Função que recupera o cadastro completo a partir de um arquivo
@@ -31,6 +32,14 @@
     * @param[out]   *c Cache
     */
     void abrirBD(string nome, Cache *c);
+
+    /**
+    * @brief        Função que carreg um arquivo de script e o executa
+    * @param[in]    nome Caminho/nome do arquivo de script
+    * @param[in]    *c Cache
+    * @param[in]    *conteudo Conteúdo da memória
+    */
+    void execScript(string nome, Cache *c, int *conteudo);
 
     /**
     * @brief        Função que exibe uma mensagem para manter a tela congelada

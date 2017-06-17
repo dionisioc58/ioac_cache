@@ -99,12 +99,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="cache_8h_source.html">cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="funcoescache_8h_source.html">funcoescache.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para bancodados.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="bancodados_8h__incl.png" border="0" usemap="#include_2bancodados_8h" alt=""/></div>
 <map name="include_2bancodados_8h" id="include_2bancodados_8h">
-<area shape="rect" id="node6" href="cache_8h.html" title="Definição da classe Cache. " alt="" coords="287,80,355,107"/></map>
+<area shape="rect" id="node6" href="cache_8h.html" title="Definição da classe Cache. " alt="" coords="349,155,417,181"/><area shape="rect" id="node8" href="funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="288,80,403,107"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
@@ -121,6 +122,9 @@ Funções</h2></td></tr>
 <tr class="memitem:aa95887f84d3192a9066c21c1b4f54f55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#aa95887f84d3192a9066c21c1b4f54f55">abrirBD</a> (string nome, <a class="el" href="classCache.html">Cache</a> *c)</td></tr>
 <tr class="memdesc:aa95887f84d3192a9066c21c1b4f54f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que recupera o cadastro completo a partir de um arquivo.  <a href="#aa95887f84d3192a9066c21c1b4f54f55">Mais...</a><br /></td></tr>
 <tr class="separator:aa95887f84d3192a9066c21c1b4f54f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2532fa78d28c8cb97ce7ff0c19eee0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a3b2532fa78d28c8cb97ce7ff0c19eee0">execScript</a> (string nome, <a class="el" href="classCache.html">Cache</a> *c, int *conteudo)</td></tr>
+<tr class="memdesc:a3b2532fa78d28c8cb97ce7ff0c19eee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que carreg um arquivo de script e o executa.  <a href="#a3b2532fa78d28c8cb97ce7ff0c19eee0">Mais...</a><br /></td></tr>
+<tr class="separator:a3b2532fa78d28c8cb97ce7ff0c19eee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36da9cfab86fc7a6a7c247eb31330044"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36da9cfab86fc7a6a7c247eb31330044"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a36da9cfab86fc7a6a7c247eb31330044">parar</a> ()</td></tr>
 <tr class="memdesc:a36da9cfab86fc7a6a7c247eb31330044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que exibe uma mensagem para manter a tela congelada. <br /></td></tr>
@@ -167,10 +171,52 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="banc
 
 </div>
 </div>
+<a class="anchor" id="a3b2532fa78d28c8cb97ce7ff0c19eee0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execScript </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCache.html">Cache</a> *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>conteudo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que carreg um arquivo de script e o executa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>Caminho/nome do arquivo de script </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*c</td><td><a class="el" href="classCache.html" title="Classe que representa uma cache. ">Cache</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*conteudo</td><td>Conteúdo da memória </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 16 de Junho de 2017 00:16:32 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 17 de Junho de 2017 14:25:37 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

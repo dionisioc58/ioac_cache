@@ -1,7 +1,7 @@
 <map id="src/main.cpp" name="src/main.cpp">
-<area shape="rect" id="node3" href="$funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="177,155,255,181"/>
-<area shape="rect" id="node5" href="$menu_8h.html" title="Arquivo de cabeçalho com a definição de funções para o menu. " alt="" coords="106,80,171,107"/>
-<area shape="rect" id="node7" href="$bancodados_8h.html" title="Arquivo de cabeçalho com a definição de funções para o controle dos dados. " alt="" coords="402,80,505,107"/>
-<area shape="rect" id="node10" href="$cache_8h.html" title="Definição da classe Cache. " alt="" coords="667,155,735,181"/>
-<area shape="rect" id="node12" href="$funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="549,80,664,107"/>
+<area shape="rect" id="node3" href="$funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="26,155,105,181"/>
+<area shape="rect" id="node5" href="$menu_8h.html" title="Arquivo de cabeçalho com a definição de funções para o menu. " alt="" coords="161,80,226,107"/>
+<area shape="rect" id="node7" href="$bancodados_8h.html" title="Arquivo de cabeçalho com a definição de funções para o controle dos dados. " alt="" coords="396,80,498,107"/>
+<area shape="rect" id="node10" href="$cache_8h.html" title="Definição da classe Cache. " alt="" coords="640,229,708,256"/>
+<area shape="rect" id="node12" href="$funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="668,155,783,181"/>
 </map>

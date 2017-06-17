@@ -16,7 +16,14 @@
     * @param[in] cache Cache
     * @param[in] conteudo Conteudo
     */
-    void Exibir(Cache *cache, int *conteudo);
+    void ExibirCache(Cache *cache, int *conteudo);
+
+    /**
+    * @brief		Exibe a memória principal
+    * @param[in]	cache Cache
+    * @param[in]	conteudo Conteudo
+    */
+    void ExibirMem(Cache *cache, int *conteudo);
 
     /**
     * @brief      Ler palavra no modo de mapeamento direto

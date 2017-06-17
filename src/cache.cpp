@@ -34,11 +34,6 @@ Cache::~Cache() {
 */
 void Cache::Inicia() {
 	bloco = new Bloco[qtd_linhas];
-	/*for(int i = 0; i < qtd_linhas; i++) {
-		bloco[i].valor = -1;
-		bloco[i].acessos = 0;
-		//bloco[i].ultacesso = NULL;
-	}*/
 }
 
 /**
@@ -72,7 +67,7 @@ int Cache::MenosAcessado(int b) {
 				retorno = j;
 			}
 	} else {
-		int inicio = (b % qtd_vias) * qtd_vias;
+		int inicio = (b % qtd_vias) * (qtd_linhas / qtd_vias);
 		retorno = inicio;
 		Bloco menor = bloco[inicio];
 		for(int j = inicio; j < (inicio + (qtd_linhas / qtd_vias)); j++) {
@@ -101,7 +96,7 @@ int Cache::MaiorFifo(int b) {
 				retorno = j;
 			}
 	} else {
-		int inicio = (b % qtd_vias) * qtd_vias;
+		int inicio = (b % qtd_vias) * (qtd_linhas / qtd_vias);
 		retorno = inicio;
 		Bloco maior = bloco[inicio];
 		for(int j = inicio; j < (inicio + (qtd_linhas / qtd_vias)); j++) {
@@ -162,7 +157,7 @@ int Cache::MaisAntiga(int b) {
 				retorno = j;
 			}
 	} else {
-		int inicio = (b % qtd_vias) * qtd_vias;
+		int inicio = (b % qtd_vias) * (qtd_linhas / qtd_vias);
 		retorno = inicio;
 		Bloco maior = bloco[inicio];
 		for(int j = inicio; j < (inicio + (qtd_linhas / qtd_vias)); j++) {
@@ -184,10 +179,18 @@ int Cache::MaisAntiga(int b) {
 int *Cache::Acessa(int palavra) {
 	int *ret = new int[2];
 	int b = palavra / tam_bloco;
+	int calc_mapeamento = map_tipo;
+
+	if(map_tipo == AssociativoParcial) {			//Alterar o tipo de mapeamento
+		if(qtd_vias == 1)							//Se parcial e só uma via => mapeamento direto
+			calc_mapeamento = Diretamente;
+		if(qtd_vias == qtd_linhas)					//Se parcial e vias = linhas => associativo total
+			calc_mapeamento = AssociativoTotal;
+	}
 	int linha;
 	ret[0] = 0; //MISS
 	ret[1] = -1;
-	if(map_tipo == Diretamente) {
+	if(calc_mapeamento == Diretamente) {
 		linha = b % qtd_linhas;
 		if(bloco[linha] == b)
 			ret[0] = 1; //HIT
@@ -198,7 +201,7 @@ int *Cache::Acessa(int palavra) {
 		ret[1] = linha;
 	}
 
-	if(map_tipo == AssociativoTotal) {
+	if(calc_mapeamento == AssociativoTotal) {
 		ret[1] = Busca(b); //Procura o bloco
 		if(ret[1] > -1) {
 			ret[0] = 1; //HIT
@@ -223,7 +226,7 @@ int *Cache::Acessa(int palavra) {
 		}
 	}
 
-	if(map_tipo == AssociativoParcial) {
+	if(calc_mapeamento == AssociativoParcial) {
 		ret[1] = Busca(b); //Procura o bloco
 		if(ret[1] > -1) {
 			ret[0] = 1; //HIT
@@ -233,7 +236,7 @@ int *Cache::Acessa(int palavra) {
 			if(ret[1] > -1) {
 				bloco[ret[1]] = b;	//Guarda na vaga
 			} else {				//Não tem vaga
-				linha = (b % qtd_vias) * qtd_vias;	//Posiciona na primeira linha da via apropriada
+				linha = (b % qtd_vias) * (qtd_linhas / qtd_vias);	//Posiciona na primeira linha da via apropriada
 				//Aplicar política de substituição
 				if(substituicao == Aleatorio)
 					linha += rand() % (qtd_linhas / qtd_vias);	//Pega uma linha aleatoriamente
@@ -284,7 +287,7 @@ int Cache::Vaga(int b) {
 			if(bloco[i] == -1)
 				return i;
 	} else {
-		int inicio = (b % qtd_vias) * qtd_vias;
+		int inicio = (b % qtd_vias) * (qtd_linhas / qtd_vias);
 		for(int i = inicio; i < (inicio + (qtd_linhas / qtd_vias)); i++) {
 			if(bloco[i] == -1)
 				return i;
