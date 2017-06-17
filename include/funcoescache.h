@@ -9,7 +9,10 @@
 #define FUNCOESCACHE_H
 
 #include "cache.h"
+#include "funcoes.h"
 #include <iostream>
+#include <sstream>
+using std::stringstream;
 
     /**
     * @brief	 Exibe a cache
@@ -29,7 +32,15 @@
     * @brief      Ler palavra no modo de mapeamento direto
     * @param[in]  cache Cache
     * @param[in]  palavra Palavra a ser lida
+    * @return     Retorna true se houve HIT, false se houve MISS
     */
-    void LerPalavra(Cache *cache, int palavra);
+    bool LerPalavra(Cache *cache, int palavra);
+
+    /**
+    * @brief        Função que exibe o histórico da cache
+    * @param[in]    num Quantidade de últimos eventos a serem exibidos
+    * @param[in]    *c Cache
+    */
+    void ExibirHistorico(Cache *c, int num = 0);
 
 #endif

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['map_5ftipo',['map_tipo',['../classCache.html#a15ea91bdf2b9bbae7ee085fa1bf80c6a',1,'Cache']]]
+  ['historico',['historico',['../classCache.html#acdc201acdad26c60e8a574de87b6d137',1,'Cache']]]
 ];

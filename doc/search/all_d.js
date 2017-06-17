@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['simulador_20de_20memória_20cache_20para_20ioac',['Simulador de Memória Cache para IOAC',['../md_README.html',1,'']]],
-  ['showmenu',['showMenu',['../menu_8h.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp'],['../menu_8cpp.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp']]],
-  ['substituicao',['substituicao',['../classCache.html#a5f3485f6b5e4e59450468e8457d4a15e',1,'Cache']]]
+  ['qtd_5fblocos',['qtd_blocos',['../classHistorico.html#ac1a809c18d9e272dc67549c9976b2b07',1,'Historico::qtd_blocos()'],['../classCache.html#a74f07c7c8d9cc0e59162f8089eeff8fd',1,'Cache::qtd_blocos()']]],
+  ['qtd_5flinhas',['qtd_linhas',['../classCache.html#a8fad9bfdda1d0463d4b874f09dd75de8',1,'Cache']]],
+  ['qtd_5fvias',['qtd_vias',['../classCache.html#a9b53a48ad6b3f3059f3f4ceca3ce8c3b',1,'Cache']]],
+  ['qtde',['qtde',['../main_8cpp.html#ad8ffda8b8c3011a7befedc09b667af30',1,'main.cpp']]]
 ];

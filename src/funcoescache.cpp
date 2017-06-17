@@ -65,13 +65,68 @@ void ExibirMem(Cache *cache, int *conteudo) {
 * @brief      Ler palavra no modo de mapeamento direto
 * @param[in]  cache Cache
 * @param[in]  palavra Palavra a ser lida
- */
-void LerPalavra(Cache *cache, int palavra) {
+* @return	  Retorna true se houve HIT, false se houve MISS
+*/
+bool LerPalavra(Cache *cache, int palavra) {
+	bool retorno;
 	int *ret = cache->Acessa(palavra);
 	if(ret[0] == 0)
 		cout << "MISS -> alocado na linha ";
 	if(ret[0] == 1)
 		cout << "HIT: linha ";
 	cout << ret[1] << endl;
+	retorno = ret[0];
 	delete[] ret;
+	return retorno;
+}
+
+/**
+* @brief        Função que exibe o histórico da cache
+* @param[in]    num Quantidade de últimos eventos a serem exibidos
+* @param[in]    *c Cache
+*/
+void ExibirHistorico(Cache *c, int num) {
+	cout << string(50, '\n');
+	if(num == 0)
+		num = c->historico.size();	//Exibir todos os eventos
+
+	//Inicializa todos os textos
+	stringstream linha1, linha2, linha3;
+	stringstream *det = new stringstream[c->qtd_linhas];
+	linha1 << "Palavra: ";
+	linha2 << "Bloco?   ";
+	linha3 << "H ou M : ";
+	for(int i = 0; i < c->qtd_linhas; i++) {
+		det[i] << "Linha " << i << ":";
+		det[i] << string(9 - comp(det[i].str()), ' ');
+	}
+	
+	//Posiciona no primeito evento a ser exibido
+	list<Historico*>::iterator it = c->historico.begin();
+	advance(it, c->historico.size() - num);
+
+	//Itera sobre os eventos a serem exibidos
+    for(; it != c->historico.end(); ++it) {
+		linha1 << string(3 - comp((*it)->palavra), ' ') << (*it)->palavra;
+		linha2 << string(3 - comp((*it)->bloco), ' ') << (*it)->bloco;
+		for(int i = 0; i < c->qtd_linhas; i++) {
+			if((*it)->val_blocos[i] == -1)
+				det[i] << "  -";
+			else
+				det[i] << string(3 - comp((*it)->val_blocos[i]), ' ') << (*it)->val_blocos[i];
+		}
+		if((*it)->resultado)
+			linha3 << "  H";
+		else
+			linha3 << "  M";
+	}
+
+	//Exibe todas as linhas
+	cout << linha1.str() << endl;
+	cout << linha2.str() << endl;
+	for(int i = 0; i < c->qtd_linhas; i++)
+		cout << det[i].str() << endl;
+	cout << linha3.str() << endl;
+	cout << string(50, '-') << endl;
+	delete[] det;
 }

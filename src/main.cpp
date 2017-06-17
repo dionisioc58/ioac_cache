@@ -1,6 +1,6 @@
 /**
-* @file    "main.cpp
-* @brief 	Arquivo fonte para execução do projeto
+* @file     main.cpp
+* @brief    Arquivo fonte para execução do projeto
 * @author   Dionísio Carvalho (dionisio@naracosta.com.br)
 * @since    15/06/2017
 * @date     15/06/2017
@@ -15,12 +15,13 @@ using namespace std;
 #include "cache.h"
 #include "funcoescache.h"
 
-#define qtde 4                 /**< Quantidade de opções no menu */
+#define qtde 5    /**< Quantidade de opções no menu */
 
 string opcoes[qtde] = {
     "Ler",
     "Exibir",
     "Exibir configurações", 
+    "Exibir histórico",
     "Sair"  //0  - ok
 };                /**< Opções do menu */
 
@@ -32,9 +33,9 @@ string opcoes[qtde] = {
 */
 int main(int argc, char* argv[]) {
     srand(time(NULL));
-    Cache *cache = new Cache();            /**< Memória cache */
-    abrirBD("./data/config.dat", cache);   /**< Carrega as configurações da cache */
-    cache->Inicia();                       /**< Inicializa a cache com -1 */
+    Cache *cache = new Cache();             /**< Memória cache */
+    abrirBD("./data/config.dat", cache);    /**< Carrega as configurações da cache */
+    cache->Inicia();                        /**< Inicializa a cache com -1 */
 
     int *conteudo = new int[(cache->qtd_blocos * cache->tam_bloco)]; /**< Define a variável para comportar os conteúdos */
 
@@ -72,6 +73,17 @@ int main(int argc, char* argv[]) {
 
             case 3:     //Exibir configurações
                 cout << *cache << endl;
+                break;
+
+            case 4:     //Exibir histórico
+                busca = recebeInt("Quantidade de últimos eventos (0 para ver todos): ", 0, (cache->historico.size()));
+                if(busca == 0)
+                    busca = cache->historico.size();
+                for(int i = 1; i < busca; i++) {
+                    ExibirHistorico(cache, i);
+                    parar(150);
+                }
+                ExibirHistorico(cache, 0);
         }
         parar();
     }

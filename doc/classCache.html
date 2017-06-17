@@ -101,7 +101,7 @@ Diagrama de colaboração para Cache:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCache__coll__graph.png" border="0" usemap="#Cache_coll__map" alt="Collaboration graph"/></div>
 <map name="Cache_coll__map" id="Cache_coll__map">
-<area shape="rect" id="node2" href="classBloco.html" title="Classe que representa um bloco. " alt="" coords="8,5,63,32"/></map>
+<area shape="rect" id="node3" href="classBloco.html" title="Classe que representa um bloco. " alt="" coords="153,5,208,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -133,12 +133,15 @@ Métodos Públicos</h2></td></tr>
 <tr class="memitem:ae7b3de739046e6c61de77a5b86bda32b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#ae7b3de739046e6c61de77a5b86bda32b">MaisAntiga</a> (int b=-1)</td></tr>
 <tr class="memdesc:ae7b3de739046e6c61de77a5b86bda32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o bloco com acesso mais antigo.  <a href="#ae7b3de739046e6c61de77a5b86bda32b">Mais...</a><br /></td></tr>
 <tr class="separator:ae7b3de739046e6c61de77a5b86bda32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae82c797d765b99f261a5aca7cc3942c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#ae82c797d765b99f261a5aca7cc3942c6">Busca</a> (int b)</td></tr>
-<tr class="memdesc:ae82c797d765b99f261a5aca7cc3942c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca um bloco.  <a href="#ae82c797d765b99f261a5aca7cc3942c6">Mais...</a><br /></td></tr>
-<tr class="separator:ae82c797d765b99f261a5aca7cc3942c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2172aab46a907adc396583c2fa97ca89"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#a2172aab46a907adc396583c2fa97ca89">Acessa</a> (int palavra)</td></tr>
 <tr class="memdesc:a2172aab46a907adc396583c2fa97ca89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acessa uma palavra.  <a href="#a2172aab46a907adc396583c2fa97ca89">Mais...</a><br /></td></tr>
 <tr class="separator:a2172aab46a907adc396583c2fa97ca89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162f8df08502434850bc4af8c56ccd95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#a162f8df08502434850bc4af8c56ccd95">GravaHistorico</a> (int p, int r)</td></tr>
+<tr class="memdesc:a162f8df08502434850bc4af8c56ccd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grava o histórico de acessos à cache.  <a href="#a162f8df08502434850bc4af8c56ccd95">Mais...</a><br /></td></tr>
+<tr class="separator:a162f8df08502434850bc4af8c56ccd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82c797d765b99f261a5aca7cc3942c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#ae82c797d765b99f261a5aca7cc3942c6">Busca</a> (int b)</td></tr>
+<tr class="memdesc:ae82c797d765b99f261a5aca7cc3942c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca um bloco.  <a href="#ae82c797d765b99f261a5aca7cc3942c6">Mais...</a><br /></td></tr>
+<tr class="separator:ae82c797d765b99f261a5aca7cc3942c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accca89f3b9c63d43e639e1f1405f193f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accca89f3b9c63d43e639e1f1405f193f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#accca89f3b9c63d43e639e1f1405f193f">AtualizaFIFO</a> ()</td></tr>
 <tr class="memdesc:accca89f3b9c63d43e639e1f1405f193f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os números fifo dos blocos não vazios. <br /></td></tr>
@@ -167,6 +170,8 @@ Atributos Públicos</h2></td></tr>
 <tr class="separator:a9b53a48ad6b3f3059f3f4ceca3ce8c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f3485f6b5e4e59450468e8457d4a15e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#a5f3485f6b5e4e59450468e8457d4a15e">substituicao</a></td></tr>
 <tr class="separator:a5f3485f6b5e4e59450468e8457d4a15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdc201acdad26c60e8a574de87b6d137"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="classHistorico.html">Historico</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCache.html#acdc201acdad26c60e8a574de87b6d137">historico</a></td></tr>
+<tr class="separator:acdc201acdad26c60e8a574de87b6d137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
@@ -262,6 +267,41 @@ Amigas</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>Retorna a posição do bloco ou -1 caso não seja encontrado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a162f8df08502434850bc4af8c56ccd95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cache::GravaHistorico </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Grava o histórico de acessos à cache. </p>
+<p>Função que grava o histórico de acessos à cache </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Palavra que foi acessada </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>HIT (1) ou MISS (0) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -494,6 +534,19 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acdc201acdad26c60e8a574de87b6d137"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt;<a class="el" href="classHistorico.html">Historico</a>*&gt; Cache::historico</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Histórico de acessos da cache </p>
+
+</div>
+</div>
 <a class="anchor" id="a15ea91bdf2b9bbae7ee085fa1bf80c6a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -579,7 +632,7 @@ Amigas</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 17 de Junho de 2017 14:25:37 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 17 de Junho de 2017 20:28:33 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

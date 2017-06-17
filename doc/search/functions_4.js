@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inicia',['Inicia',['../classCache.html#a82acacb95d4d43556d6dc973df6e68a7',1,'Cache']]]
+  ['gravahistorico',['GravaHistorico',['../classCache.html#a162f8df08502434850bc4af8c56ccd95',1,'Cache']]]
 ];

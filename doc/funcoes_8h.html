@@ -95,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <p>Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados.  
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para funcoes.h:</div>
@@ -108,7 +109,7 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 <div class="dyncontent">
 <div class="center"><img src="funcoes_8h__dep__incl.png" border="0" usemap="#include_2funcoes_8hdep" alt=""/></div>
 <map name="include_2funcoes_8hdep" id="include_2funcoes_8hdep">
-<area shape="rect" id="node2" href="menu_8h.html" title="Arquivo de cabeçalho com a definição de funções para o menu. " alt="" coords="92,80,203,107"/><area shape="rect" id="node3" href="main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="5,155,103,181"/><area shape="rect" id="node5" href="funcoes_8cpp.html" title="Arquivo de corpo com a definição de funções auxiliares para a entrada de dados. " alt="" coords="227,80,342,107"/><area shape="rect" id="node4" href="menu_8cpp.html" title="Arquivo de corpo com a definição de funções para o menu. " alt="" coords="127,155,229,181"/></map>
+<area shape="rect" id="node2" href="funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="45,80,204,107"/><area shape="rect" id="node5" href="main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="183,229,280,256"/><area shape="rect" id="node6" href="menu_8h.html" title="Arquivo de cabeçalho com a definição de funções para o menu. " alt="" coords="280,80,391,107"/><area shape="rect" id="node8" href="funcoes_8cpp.html" title="Arquivo de corpo com a definição de funções auxiliares para a entrada de dados. " alt="" coords="415,80,530,107"/><area shape="rect" id="node3" href="bancodados_8h.html" title="Arquivo de cabeçalho com a definição de funções para o controle dos dados. " alt="" coords="5,155,153,181"/><area shape="rect" id="node4" href="bancodados_8cpp.html" title="Arquivo de corpo com a definição de funções para o controle dos dados. " alt="" coords="10,229,149,256"/><area shape="rect" id="node7" href="menu_8cpp.html" title="Arquivo de corpo com a definição de funções para o menu. " alt="" coords="330,155,431,181"/></map>
 </div>
 </div>
 <p><a href="funcoes_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
@@ -130,6 +131,10 @@ Funções</h2></td></tr>
 <tr class="memitem:a62a3caae350a79af034210496404d4e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8h.html#a62a3caae350a79af034210496404d4e7">remove_acentos</a> (string &amp;s)</td></tr>
 <tr class="memdesc:a62a3caae350a79af034210496404d4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que remove acentuações de uma string.  <a href="#a62a3caae350a79af034210496404d4e7">Mais...</a><br /></td></tr>
 <tr class="separator:a62a3caae350a79af034210496404d4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3736a457a2b4fb2a8895504b24dcf1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aee3736a457a2b4fb2a8895504b24dcf1"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="funcoes_8h.html#aee3736a457a2b4fb2a8895504b24dcf1">comp</a> (T x)</td></tr>
+<tr class="memdesc:aee3736a457a2b4fb2a8895504b24dcf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que calcula o comprimento da variável.  <a href="#aee3736a457a2b4fb2a8895504b24dcf1">Mais...</a><br /></td></tr>
+<tr class="separator:aee3736a457a2b4fb2a8895504b24dcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. </p>
@@ -137,6 +142,33 @@ Funções</h2></td></tr>
 <dl class="section since"><dt>Desde</dt><dd>11/03/2017 </dd></dl>
 <dl class="section date"><dt>Data</dt><dd>15/06/2017 </dd></dl>
 </div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="aee3736a457a2b4fb2a8895504b24dcf1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int comp </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que calcula o comprimento da variável. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Variável a ser medida </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Comprimento da variável </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae43cf6b49fec4f2227f8a73cca5b2080"></a>
 <div class="memitem">
 <div class="memproto">
@@ -298,7 +330,7 @@ Funções</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 17 de Junho de 2017 14:25:37 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 17 de Junho de 2017 20:28:33 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

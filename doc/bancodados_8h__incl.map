@@ -1,4 +1,5 @@
 <map id="include/bancodados.h" name="include/bancodados.h">
-<area shape="rect" id="node6" href="$cache_8h.html" title="Definição da classe Cache. " alt="" coords="349,155,417,181"/>
-<area shape="rect" id="node8" href="$funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="288,80,403,107"/>
+<area shape="rect" id="node8" href="$cache_8h.html" title="Definição da classe Cache. " alt="" coords="59,155,127,181"/>
+<area shape="rect" id="node11" href="$funcoescache_8h.html" title="Arquivo de cabeçalho com a definição de funções para a cache. " alt="" coords="235,80,350,107"/>
+<area shape="rect" id="node12" href="$funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="253,155,332,181"/>
 </map>

@@ -75,14 +75,20 @@ void execScript(string nome, Cache *c, int *conteudo) {
     entrada.clear();
     entrada.seekg(0);
     int linha = 0;
+    int count_miss = 0, count_hit = 0;
     
     while(!entrada.eof()) {
         getline(entrada, texto);
         if(texto != "") {
             if(texto.substr(0, 1) != "#") { //Linha não comentada
-                if(texto.substr(0, 4) == "READ")
-                    LerPalavra(c, stoi(texto.substr(5)));
-                else if(texto.substr(0, 4) == "SHOW") {
+                if(texto.substr(0, 4) == "READ") {
+                    if(LerPalavra(c, stoi(texto.substr(5))))
+                        count_hit++;
+                    else
+                        count_miss++;
+                    ExibirHistorico(c, 0);
+                    parar(200);
+                } else if(texto.substr(0, 4) == "SHOW") {
                     ExibirCache(c, conteudo);
                     parar();
                     ExibirMem(c, conteudo);
@@ -97,16 +103,26 @@ void execScript(string nome, Cache *c, int *conteudo) {
     entrada.close();
     cout << "Script executado com sucesso!" << endl;
     cout << "Quantidade de comandos: " << linha << endl;
+    cout << count_hit << " HIT e " << count_miss << " MISS." << endl;
+    cout << "Taxa de hit: " << (count_hit * 100 / (count_hit + count_miss)) << "%" << endl;
     parar();
 }
 
 /**
 * @brief        Função que exibe uma mensagem para manter a tela congelada
+* @param[in]    milissegundos Tempo em milissegundos até continuar automaticamente
+*               Se 0, aguarda o ENTER
 */
-void parar() {
+void parar(int milissegundos) {
     cin.clear();
     fflush(stdin);
-    cout << "Pressione ENTER para continuar...";
     string p;
-    getline(cin, p);
+    if(milissegundos == 0) {
+        cout << "Pressione ENTER para continuar...";
+        getline(cin, p);
+    } else {
+        //Aguardar um tempo em milissegundos
+        std::chrono::milliseconds dura(milissegundos);
+        std::this_thread::sleep_for(dura);
+    }
 }

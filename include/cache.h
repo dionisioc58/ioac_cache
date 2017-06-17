@@ -10,8 +10,10 @@
 
 	#include <iostream>
 	#include <ctime>
+	#include <list>
 	using std::ostream;
 	using std::endl;
+	using std::list;
 
 	//! Mapeamentos
     /*! Tipos de mapeamentos de memória. */
@@ -74,6 +76,33 @@
 	};
 
 	/**
+    * @class   Historico cache.h
+    * @brief   Classe que representa um historico
+    * @details Os atributos são: palavra, bloco, qtd_blocos, blocos, resultado
+    */  
+	class Historico {
+		public:
+			int palavra;										    /**< Palavra */
+			int bloco;	    									    /**< Número do bloco em que a palavra se encontra */
+            int qtd_blocos;    									    /**< Número do blocos da cache */
+			int *val_blocos;									    /**< Vetor de blocos com a situação de cada um na cache */
+			bool resultado;     								    /**< HIT (1) ou MISS (0) */
+
+			Historico(int p, int b, int qtd, Bloco *bls, bool r) {	/**< @brief Construtor parametrizado */
+				palavra = p;
+				bloco = b;
+                qtd_blocos = qtd;
+				val_blocos = new int[qtd];
+				for(int i = 0; i < qtd; i++)
+					val_blocos[i] = bls[i].valor;
+				resultado = r;
+			}
+			~Historico() {										    /**< @brief Destrutor padrão */
+				delete[] val_blocos;
+			}
+	};
+
+	/**
     * @class   Cache cache.h
     * @brief   Classe que representa uma cache
     * @details Os atributos são: tam_bloco, qtd_linhas, qtd_blocos, map_tipo, qtd_vias, substituicao
@@ -87,6 +116,7 @@
 			int map_tipo;   									/**< Tipo de mapeamento */
 			int qtd_vias;   									/**< Número de vias (para o caso de ser parcialmente associativo) */
 			int substituicao; 									/**< Política de substituição */
+			list<Historico*> historico;							/**< Histórico de acessos da cache */
 		
 			Cache(); 											/**< @brief Construtor padrão */
 			~Cache();											/**< @brief Destrutor padrão */
@@ -97,8 +127,9 @@
 			int MenorFifo();									/**< @brief Retorna o bloco com menor fifo */
 			int MaisNova();										/**< @brief Retorna o bloco com acesso mais recente */
 			int MaisAntiga(int b = -1);							/**< @brief Retorna o bloco com acesso mais antigo */
-			int Busca(int b);									/**< @brief Busca um bloco */
 			int *Acessa(int palavra);							/**< @brief Acessa uma palavra */
+			void GravaHistorico(int p, int r);					/**< @brief Grava o histórico de acessos à cache */
+			int Busca(int b);									/**< @brief Busca um bloco */
 			void AtualizaFIFO();								/**< @brief Atualiza os números fifo dos blocos não vazios */
 			int Vaga(int b = -1);								/**< @brief	Função que busca um bloco vazio	*/
 			friend ostream& operator<<(ostream &os, Cache &c); 	/** @brief Sobrecarga do operador de extração em stream */

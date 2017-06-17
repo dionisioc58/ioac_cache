@@ -14,6 +14,8 @@
     using std::cout;
     using std::endl;
 
+    #include <sstream>
+    using std::stringstream;
     #include <string>
     using std::string;
 
@@ -52,5 +54,17 @@
     * @param s String com acentuações a remover
     */
     void remove_acentos (string &s);
+
+    /**
+    * @brief Função que calcula o comprimento da variável
+    * @param x Variável a ser medida
+    * @return Comprimento da variável
+    */
+    template <typename T>
+    int comp(T x) {
+        stringstream ss;
+        ss << x;
+        return ss.str().length();
+    }
 
 #endif

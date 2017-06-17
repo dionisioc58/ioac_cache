@@ -22,6 +22,9 @@
     using std::string;
 
     #include <sstream>
+
+    #include <chrono>
+    #include <thread>
     
     #include "cache.h"
     #include "funcoescache.h"
@@ -43,7 +46,9 @@
 
     /**
     * @brief        Função que exibe uma mensagem para manter a tela congelada
+    * @param[in]    milissegundos Tempo em milissegundos até continuar automaticamente
+    *               Se 0, aguarda o ENTER
     */
-    void parar();
+    void parar(int milissegundos = 0);
 
 #endif

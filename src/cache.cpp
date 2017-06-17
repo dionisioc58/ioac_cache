@@ -27,6 +27,8 @@ Cache::Cache(){
 Cache::~Cache() {
     if(bloco)
 		delete[] bloco;
+	for (list<Historico*>::iterator it = historico.begin(); it != historico.end(); ++it)
+		delete *it;
 }
 
 /**
@@ -251,8 +253,18 @@ int *Cache::Acessa(int palavra) {
 			}
 		}
 	}
+	GravaHistorico(palavra, ret[0]);
 	AtualizaFIFO();
 	return ret;
+}
+
+/**
+* @details Função que grava o histórico de acessos à cache
+* @param[in] p Palavra que foi acessada
+* @param[in] r HIT (1) ou MISS (0)
+*/
+void Cache::GravaHistorico(int p, int r) {
+	historico.push_back(new Historico(p, (p / tam_bloco), tam_bloco, bloco, r));
 }
 
 /**

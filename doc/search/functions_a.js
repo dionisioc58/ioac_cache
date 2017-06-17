@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['showmenu',['showMenu',['../menu_8h.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp'],['../menu_8cpp.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp']]]
+  ['parar',['parar',['../bancodados_8h.html#a633d2b0166254d7c752acadcf6247817',1,'parar(int milissegundos=0):&#160;bancodados.cpp'],['../bancodados_8cpp.html#afa2f99f4e49122dc1e7239936dc6b428',1,'parar(int milissegundos):&#160;bancodados.cpp']]]
 ];

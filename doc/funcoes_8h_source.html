@@ -98,21 +98,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">using</span> std::cout;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">using</span> std::endl;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #include &lt;string&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">using</span> std::string;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="funcoes_8h.html#ad50ffdcfecc6907b77dfd91f5bdb8955">recebeFloat</a>(<span class="keywordtype">string</span> msg, <span class="keywordtype">int</span> min);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="funcoes_8h.html#aa3806e8dd87cc6749d8b5538dc9d3314">recebeInt</a>(<span class="keywordtype">string</span> msg, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max = 0);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="funcoes_8h.html#ab7110f5deede219ac8d8500924d8fc46">recebeString</a>(<span class="keywordtype">string</span> msg);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="funcoes_8h.html#ae43cf6b49fec4f2227f8a73cca5b2080">minusculas</a>(<span class="keywordtype">string</span>&amp; s);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="funcoes_8h.html#a62a3caae350a79af034210496404d4e7">remove_acentos</a> (<span class="keywordtype">string</span> &amp;s);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">using</span> std::stringstream;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    #include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="funcoes_8h.html#ad50ffdcfecc6907b77dfd91f5bdb8955">recebeFloat</a>(<span class="keywordtype">string</span> msg, <span class="keywordtype">int</span> min);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="funcoes_8h.html#aa3806e8dd87cc6749d8b5538dc9d3314">recebeInt</a>(<span class="keywordtype">string</span> msg, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max = 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="funcoes_8h.html#ab7110f5deede219ac8d8500924d8fc46">recebeString</a>(<span class="keywordtype">string</span> msg);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="funcoes_8h.html#ae43cf6b49fec4f2227f8a73cca5b2080">minusculas</a>(<span class="keywordtype">string</span>&amp; s);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="funcoes_8h.html#a62a3caae350a79af034210496404d4e7">remove_acentos</a> (<span class="keywordtype">string</span> &amp;s);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="funcoes_8h.html#aee3736a457a2b4fb2a8895504b24dcf1">   64</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="funcoes_8h.html#aee3736a457a2b4fb2a8895504b24dcf1">comp</a>(T x) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        stringstream ss;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        ss &lt;&lt; x;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> ss.str().length();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="funcoes_8h_html_a62a3caae350a79af034210496404d4e7"><div class="ttname"><a href="funcoes_8h.html#a62a3caae350a79af034210496404d4e7">remove_acentos</a></div><div class="ttdeci">void remove_acentos(string &amp;s)</div><div class="ttdoc">Função que remove acentuações de uma string. </div><div class="ttdef"><b>Definition:</b> funcoes.cpp:95</div></div>
+<div class="ttc" id="funcoes_8h_html_aee3736a457a2b4fb2a8895504b24dcf1"><div class="ttname"><a href="funcoes_8h.html#aee3736a457a2b4fb2a8895504b24dcf1">comp</a></div><div class="ttdeci">int comp(T x)</div><div class="ttdoc">Função que calcula o comprimento da variável. </div><div class="ttdef"><b>Definition:</b> funcoes.h:64</div></div>
 <div class="ttc" id="funcoes_8h_html_ab7110f5deede219ac8d8500924d8fc46"><div class="ttname"><a href="funcoes_8h.html#ab7110f5deede219ac8d8500924d8fc46">recebeString</a></div><div class="ttdeci">string recebeString(string msg)</div><div class="ttdoc">Função que coleta um valor string pela entrada validando-o. </div><div class="ttdef"><b>Definition:</b> funcoes.cpp:64</div></div>
 <div class="ttc" id="funcoes_8h_html_ad50ffdcfecc6907b77dfd91f5bdb8955"><div class="ttname"><a href="funcoes_8h.html#ad50ffdcfecc6907b77dfd91f5bdb8955">recebeFloat</a></div><div class="ttdeci">float recebeFloat(string msg, int min)</div><div class="ttdoc">Função que coleta um valor float maior que zero pela entrada validando-o. </div><div class="ttdef"><b>Definition:</b> funcoes.cpp:17</div></div>
 <div class="ttc" id="funcoes_8h_html_ae43cf6b49fec4f2227f8a73cca5b2080"><div class="ttname"><a href="funcoes_8h.html#ae43cf6b49fec4f2227f8a73cca5b2080">minusculas</a></div><div class="ttdeci">void minusculas(string &amp;s)</div><div class="ttdoc">Funcao que converte todos os caracteres para letra minuscula. </div><div class="ttdef"><b>Definition:</b> funcoes.cpp:85</div></div>
@@ -120,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 17 de Junho de 2017 14:25:37 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 17 de Junho de 2017 20:28:33 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

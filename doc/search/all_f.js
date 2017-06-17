@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['ultacesso',['ultacesso',['../classBloco.html#a39f4ad5fc845ba57fc39abd0cc426eea',1,'Bloco']]]
+  ['simulador_20de_20memória_20cache_20para_20ioac',['Simulador de Memória Cache para IOAC',['../md_README.html',1,'']]],
+  ['showmenu',['showMenu',['../menu_8h.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp'],['../menu_8cpp.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp']]],
+  ['substituicao',['substituicao',['../classCache.html#a5f3485f6b5e4e59450468e8457d4a15e',1,'Cache']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['recebefloat',['recebeFloat',['../funcoes_8h.html#ad50ffdcfecc6907b77dfd91f5bdb8955',1,'recebeFloat(string msg, int min):&#160;funcoes.cpp'],['../funcoes_8cpp.html#ad50ffdcfecc6907b77dfd91f5bdb8955',1,'recebeFloat(string msg, int min):&#160;funcoes.cpp']]],
-  ['recebeint',['recebeInt',['../funcoes_8h.html#aa3806e8dd87cc6749d8b5538dc9d3314',1,'recebeInt(string msg, int min, int max=0):&#160;funcoes.cpp'],['../funcoes_8cpp.html#ae30162a7ccd43ce00c751b1fb0efe785',1,'recebeInt(string msg, int min, int max):&#160;funcoes.cpp']]],
-  ['recebestring',['recebeString',['../funcoes_8h.html#ab7110f5deede219ac8d8500924d8fc46',1,'recebeString(string msg):&#160;funcoes.cpp'],['../funcoes_8cpp.html#ab7110f5deede219ac8d8500924d8fc46',1,'recebeString(string msg):&#160;funcoes.cpp']]],
-  ['remove_5facentos',['remove_acentos',['../funcoes_8h.html#a62a3caae350a79af034210496404d4e7',1,'remove_acentos(string &amp;s):&#160;funcoes.cpp'],['../funcoes_8cpp.html#a62a3caae350a79af034210496404d4e7',1,'remove_acentos(string &amp;s):&#160;funcoes.cpp']]]
+  ['operator_21_3d',['operator!=',['../classBloco.html#a8a3512839f3b253c9ad37b6e1e7144fd',1,'Bloco']]],
+  ['operator_2a',['operator*',['../classBloco.html#a1e6e5fbfe046d42afc170e4bd4fedd5e',1,'Bloco']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../cache_8cpp.html#ab419b3fbec72b2c8f6583016b9e9583e',1,'cache.cpp']]],
+  ['operator_3d',['operator=',['../classBloco.html#a75670fdc6cc30a85a1c01ce1e0310326',1,'Bloco']]],
+  ['operator_3d_3d',['operator==',['../classBloco.html#aa5f4289e597d571d6f3db25a445a2752',1,'Bloco::operator==()'],['../classCache.html#aec5f8319f9ecdf5be13f30de2a0d4eb8',1,'Cache::operator==()']]]
 ];

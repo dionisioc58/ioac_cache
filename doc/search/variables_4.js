@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opcoes',['opcoes',['../main_8cpp.html#ac6e84ac59605bee887f25105cda362eb',1,'main.cpp']]]
+  ['map_5ftipo',['map_tipo',['../classCache.html#a15ea91bdf2b9bbae7ee085fa1bf80c6a',1,'Cache']]]
 ];
