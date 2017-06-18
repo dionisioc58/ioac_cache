@@ -8,7 +8,7 @@ Simulador de Memória Cache para a disciplina IOAC
 COMPILAR
 
     Estando na pasta raiz do projeto, basta executar o comando make e aguardar a compilação do projeto, 
-bem como a criação da documentação pelo Doxygen
+bem como a criação da documentação pelo Doxygen.
 
 CONFIGURAÇÕES
 
@@ -45,3 +45,15 @@ O script de simulador de memória cache pode conter três tipos de linhas:
     Iniciadas com "#" - indicam linhas de comentários
     Iniciadas com "READ;" - comando de leitura (deve ser seguido pela palavra desejada. P.E.: READ;15)
     Iniciadas com "SHOW;" - comando de exibição da memória
+
+ARQUIVOS DO PROJETO
+
+    A descrição sobre cada arquivo do projeto encontra-se na documentação gerada pelo Doxygen dentro da pasta
+doc. Porém, abaixo descrevo também o objetivo de cada um (.h e .cpp):
+
+    * main.cpp      - contém a função principal do programa;
+    * bancodados    - contém funções de abertura de arquivos, execução de scripts e o congelamento da tela;
+    * cache         - contém a classe "cache";
+    * funcoes       - funções diversas de entrada de dados e manipulação de strings;
+    * funcoescache  - funções que manipulam uma cache (intermediárias entre o usuário e a classe);
+    * menu          - exibe um menu de opções na tela.
