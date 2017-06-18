@@ -127,6 +127,6 @@ void ExibirHistorico(Cache *c, int num) {
 	for(int i = 0; i < c->qtd_linhas; i++)
 		cout << det[i].str() << endl;
 	cout << linha3.str() << endl;
-	cout << string(50, '-') << endl;
+	cout << string(comp(linha1.str()), '_') << endl;
 	delete[] det;
 }

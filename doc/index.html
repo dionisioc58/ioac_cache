@@ -80,20 +80,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="contents">
 <div class="textblock"><p>OBJETIVO</p>
 <p>Simulador de Memória <a class="el" href="classCache.html" title="Classe que representa uma cache. ">Cache</a> para a disciplina IOAC</p>
-<p>COMPILAR</p>
-<p>Estando na pasta raiz do projeto, basta executar o comando make e aguardar a compilação do projeto, bem como a criação da documentação pelo Doxygen</p>
-<p>CONFIGURAÇÕES</p>
-<p>Na pasta "data" deve existir um arquivo de configurações com as opções de configuração da memória conforme descrita no documento disponibilizado pelo professor. O arquivo deve ser nomeado como "config.dat"</p>
-<p>EXECUTAR</p>
-<p>Ainda na pasta raiz do projeto, se em ambiente linux, digite "./bin/cache" para executar o programa sem argumentos. Após a leitura do arquivo de configurações, o sistema apresentará um relatório sobre a configuração lida.</p>
-<p>OPÇÕES EXTRA</p>
-<p>Para executar o programa e carregar um script de comandos (.smc - simulador de memória cache) automaticamente, basta executá-lo passando como primeiro argumento, o caminho/nome do script. Por exemplo: "./bin/cache ./data/script1.smc" Durante a execução, será apresentado uma animação com o carregamento de cada comando de leitura (READ). Ao término, um relatório sobre quantos HITS, MISS e a taxa de percentual de HITS.</p>
+<p>COMPILAR </p><pre class="fragment">Estando na pasta raiz do projeto, basta executar o comando make e aguardar a compilação do projeto, 
+</pre><p> bem como a criação da documentação pelo Doxygen</p>
+<p>CONFIGURAÇÕES </p><pre class="fragment">Na pasta "data" deve existir um arquivo de configurações com as opções de configuração da memória conforme 
+descrita no documento disponibilizado pelo professor. O arquivo deve ser nomeado como "config.dat".
+</pre><p>EXECUTAR </p><pre class="fragment">Ainda na pasta raiz do projeto, se em ambiente linux, digite "./bin/cache" para executar o programa sem 
+</pre><p> argumentos. Após a leitura do arquivo de configurações,o sistema apresentará um relatório sobre a configuração lida.</p>
+<p>OPÇÕES EXTRA </p><pre class="fragment">Para executar o programa e carregar um script de comandos (.smc - simulador de memória cache) automaticamente, 
+</pre><p> basta executá-lo passando como primeiro argumento, o caminho/nome do script. Por exemplo: "./bin/cache ./data/script1.smc" Durante a execução, será apresentado uma animação com o carregamento de cada comando de leitura (READ). Ao término, um relatório sobre quantos HITS, MISS e a taxa de percentual de HITS.</p>
 <p>MENU PRINCIPAL Acesse a opção "Ler" para fazer a leitura de uma palavra. Caso ela não esteja na cache, ele retornará a informação de MISS e a linha em que foi alocada a palavra. A opção "Exibir" listará todos as informações na cache e na memória principal. "Exibir configurações" emite o mesmo relatório que foi gerado durante o carregamento da aplicação sobre as configurações da memória. "Exibir histórico" mostrará todas as operações de acesso feitas na memória e a situação em que estava em cada uma delas. Esta opção solicitará quantas dos últimos eventos deseja rever. Digitando "0", o sistema exibirá todas as alterações. Para executar um script de comandos, acesse a opção "Executar script". O sistema solicitará um caminho/nome do arquivo. Por fim, a opção "Sair" encerra a aplicação.</p>
 <p>ARQUIVO DE SCRIPT (.smc) O script de simulador de memória cache pode conter três tipos de linhas: Iniciadas com "#" - indicam linhas de comentários Iniciadas com "READ;" - comando de leitura (deve ser seguido pela palavra desejada. P.E.: READ;15) Iniciadas com "SHOW;" - comando de exibição da memória </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 18 de Junho de 2017 01:35:56 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 18 de Junho de 2017 01:46:48 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
