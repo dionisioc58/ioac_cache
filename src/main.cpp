@@ -15,13 +15,14 @@ using namespace std;
 #include "cache.h"
 #include "funcoescache.h"
 
-#define qtde 5    /**< Quantidade de opções no menu */
+#define qtde 6    /**< Quantidade de opções no menu */
 
 string opcoes[qtde] = {
     "Ler",
     "Exibir",
     "Exibir configurações", 
     "Exibir histórico",
+    "Executar script",
     "Sair"  //0  - ok
 };                /**< Opções do menu */
 
@@ -47,8 +48,8 @@ int main(int argc, char* argv[]) {
 
     /**< Executa script, caso seja apontado */
     if(argc > 1) {
-        cout << "Abrindo arquivo de script..." << endl;
         execScript(argv[1], cache, conteudo);
+        parar();
     }
 
     /**< Menu principal do sistema */
@@ -84,6 +85,10 @@ int main(int argc, char* argv[]) {
                     parar(150);
                 }
                 ExibirHistorico(cache, 0);
+                break;
+
+            case 5:     //Executar script
+                execScript("", cache, conteudo);
         }
         parar();
     }

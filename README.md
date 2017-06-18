@@ -29,6 +29,8 @@ Acesse a opção "Ler" para fazer a leitura de uma palavra. Caso ela não esteja
 A opção "Exibir" listará todos as informações na cache e na memória principal.
 "Exibir configurações" emite o mesmo relatório que foi gerado durante o carregamento da aplicação sobre as configurações da memória.
 "Exibir histórico" mostrará todas as operações de acesso feitas na memória e a situação em que estava em cada uma delas. Esta opção solicitará quantas dos últimos eventos deseja rever. Digitando "0", o sistema exibirá todas as alterações.
+Para executar um script de comandos, acesse a opção "Executar script". O sistema solicitará um caminho/nome do arquivo.
+Por fim, a opção "Sair" encerra a aplicação.
 
 ARQUIVO DE SCRIPT (.smc)
 O script de simulador de memória cache pode conter três tipos de linhas:

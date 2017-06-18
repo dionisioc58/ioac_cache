@@ -65,10 +65,14 @@ void abrirBD(string nome, Cache *c) {
 * @param[in]    *conteudo Conteúdo da memória
 */
 void execScript(string nome, Cache *c, int *conteudo) {
+    if(nome == "")
+        nome = recebeString("Digite o caminho/nome do arquivo de script: ");
+
+    cout << "Abrindo arquivo de script..." << endl;
     ifstream entrada(nome);
     if(!entrada) {
         cout << "Não foi possível abrir o arquivo de script." << endl;
-        exit(1);
+        return;
     }
     string texto;
     
@@ -105,7 +109,6 @@ void execScript(string nome, Cache *c, int *conteudo) {
     cout << "Quantidade de comandos: " << linha << endl;
     cout << count_hit << " HIT e " << count_miss << " MISS." << endl;
     cout << "Taxa de hit: " << (count_hit * 100 / (count_hit + count_miss)) << "%" << endl;
-    parar();
 }
 
 /**
