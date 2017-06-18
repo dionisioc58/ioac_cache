@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="textblock"><p>OBJETIVO</p>
 <p>Simulador de Memória <a class="el" href="classCache.html" title="Classe que representa uma cache. ">Cache</a> para a disciplina IOAC</p>
 <p>COMPILAR </p><pre class="fragment">Estando na pasta raiz do projeto, basta executar o comando make e aguardar a compilação do projeto, 
-</pre><p> bem como a criação da documentação pelo Doxygen</p>
+</pre><p> bem como a criação da documentação pelo Doxygen.</p>
 <p>CONFIGURAÇÕES </p><pre class="fragment">Na pasta "data" deve existir um arquivo de configurações com as opções de configuração da memória conforme 
 descrita no documento disponibilizado pelo professor. O arquivo deve ser nomeado como "config.dat".
 </pre><p>EXECUTAR </p><pre class="fragment">Ainda na pasta raiz do projeto, se em ambiente linux, digite "./bin/cache" para executar o programa sem 
@@ -89,11 +89,17 @@ descrita no documento disponibilizado pelo professor. O arquivo deve ser nomeado
 <p>OPÇÕES EXTRA </p><pre class="fragment">Para executar o programa e carregar um script de comandos (.smc - simulador de memória cache) automaticamente, 
 </pre><p> basta executá-lo passando como primeiro argumento, o caminho/nome do script. Por exemplo: "./bin/cache ./data/script1.smc" Durante a execução, será apresentado uma animação com o carregamento de cada comando de leitura (READ). Ao término, um relatório sobre quantos HITS, MISS e a taxa de percentual de HITS.</p>
 <p>MENU PRINCIPAL Acesse a opção "Ler" para fazer a leitura de uma palavra. Caso ela não esteja na cache, ele retornará a informação de MISS e a linha em que foi alocada a palavra. A opção "Exibir" listará todos as informações na cache e na memória principal. "Exibir configurações" emite o mesmo relatório que foi gerado durante o carregamento da aplicação sobre as configurações da memória. "Exibir histórico" mostrará todas as operações de acesso feitas na memória e a situação em que estava em cada uma delas. Esta opção solicitará quantas dos últimos eventos deseja rever. Digitando "0", o sistema exibirá todas as alterações. Para executar um script de comandos, acesse a opção "Executar script". O sistema solicitará um caminho/nome do arquivo. Por fim, a opção "Sair" encerra a aplicação.</p>
-<p>ARQUIVO DE SCRIPT (.smc) O script de simulador de memória cache pode conter três tipos de linhas: Iniciadas com "#" - indicam linhas de comentários Iniciadas com "READ;" - comando de leitura (deve ser seguido pela palavra desejada. P.E.: READ;15) Iniciadas com "SHOW;" - comando de exibição da memória </p>
-</div></div><!-- contents -->
+<p>ARQUIVO DE SCRIPT (.smc) O script de simulador de memória cache pode conter três tipos de linhas: Iniciadas com "#" - indicam linhas de comentários Iniciadas com "READ;" - comando de leitura (deve ser seguido pela palavra desejada. P.E.: READ;15) Iniciadas com "SHOW;" - comando de exibição da memória</p>
+<p>ARQUIVOS DO PROJETO </p><pre class="fragment">A descrição sobre cada arquivo do projeto encontra-se na documentação gerada pelo Doxygen dentro da pasta
+</pre><p> doc. Porém, abaixo descrevo também o objetivo de cada um (.h e .cpp): </p><pre class="fragment">* main.cpp      - contém a função principal do programa;
+* bancodados    - contém funções de abertura de arquivos, execução de scripts e o congelamento da tela;
+* cache         - contém a classe "cache";
+* funcoes       - funções diversas de entrada de dados e manipulação de strings;
+* funcoescache  - funções que manipulam uma cache (intermediárias entre o usuário e a classe);
+* menu          - exibe um menu de opções na tela. </pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 18 de Junho de 2017 01:46:48 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 18 de Junho de 2017 14:13:15 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
