@@ -15,8 +15,7 @@ var indexSectionsWithContent =
   5: "mp",
   6: "adfl",
   7: "o",
-  8: "lq",
-  9: "s"
+  8: "lq"
 };
 
 var indexSectionNames =
@@ -29,8 +28,7 @@ var indexSectionNames =
   5: "enums",
   6: "enumvalues",
   7: "related",
-  8: "defines",
-  9: "pages"
+  8: "defines"
 };
 
 function convertToId(search)

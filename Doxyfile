@@ -8,6 +8,8 @@ PROJECT_NAME		= "Simulador de Memória Cache para IOAC"
 # Descricao do projeto
 PROJECT_BRIEF		= "Simulador de Memória Cache para IOAC"
 
+USE_MDFILE_AS_MAINPAGE = README.md
+
 # Endereco do diretorio no qual sera armazenada a documentacao gerada
 OUTPUT_DIRECTORY 	=
 

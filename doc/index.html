@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores enumerados</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definições e Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,10 +78,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">Simulador de Memória Cache para IOAC Documentação</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>OBJETIVO</p>
+<p>Simulador de Memória <a class="el" href="classCache.html" title="Classe que representa uma cache. ">Cache</a> para a disciplina IOAC</p>
+<p>COMPILAR</p>
+<p>Estando na pasta raiz do projeto, basta executar o comando make e aguardar a compilação do projeto, bem como a criação da documentação pelo Doxygen</p>
+<p>CONFIGURAÇÕES</p>
+<p>Na pasta "data" deve existir um arquivo de configurações com as opções de configuração da memória conforme descrita no documento disponibilizado pelo professor. O arquivo deve ser nomeado como "config.dat"</p>
+<p>EXECUTAR</p>
+<p>Ainda na pasta raiz do projeto, se em ambiente linux, digite "./bin/cache" para executar o programa sem argumentos. Após a leitura do arquivo de configurações, o sistema apresentará um relatório sobre a configuração lida.</p>
+<p>OPÇÕES EXTRA</p>
+<p>Para executar o programa e carregar um script de comandos (.smc - simulador de memória cache) automaticamente, basta executá-lo passando como primeiro argumento, o caminho/nome do script. Por exemplo: "./bin/cache ./data/script1.smc" Durante a execução, será apresentado uma animação com o carregamento de cada comando de leitura (READ). Ao término, um relatório sobre quantos HITS, MISS e a taxa de percentual de HITS.</p>
+<p>MENU PRINCIPAL Acesse a opção "Ler" para fazer a leitura de uma palavra. Caso ela não esteja na cache, ele retornará a informação de MISS e a linha em que foi alocada a palavra. A opção "Exibir" listará todos as informações na cache e na memória principal. "Exibir configurações" emite o mesmo relatório que foi gerado durante o carregamento da aplicação sobre as configurações da memória. "Exibir histórico" mostrará todas as operações de acesso feitas na memória e a situação em que estava em cada uma delas. Esta opção solicitará quantas dos últimos eventos deseja rever. Digitando "0", o sistema exibirá todas as alterações.</p>
+<p>ARQUIVO DE SCRIPT (.smc) O script de simulador de memória cache pode conter três tipos de linhas: Iniciadas com "#" - indicam linhas de comentários Iniciadas com "READ;" - comando de leitura (deve ser seguido pela palavra desejada. P.E.: READ;15) Iniciadas com "SHOW;" - comando de exibição da memória </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 17 de Junho de 2017 20:28:33 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 18 de Junho de 2017 01:17:12 para Simulador de Memória Cache para IOAC por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
