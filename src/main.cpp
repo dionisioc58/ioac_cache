@@ -23,7 +23,7 @@ string opcoes[qtde] = {
     "Exibir configurações", 
     "Exibir histórico",
     "Executar script",
-    "Sair"  //0  - ok
+    "Sair"
 };                /**< Opções do menu */
 
 /**
@@ -78,13 +78,18 @@ int main(int argc, char* argv[]) {
 
             case 4:     //Exibir histórico
                 busca = recebeInt("Quantidade de últimos eventos (0 para ver todos): ", 0, (cache->historico.size()));
-                if(busca == 0)
+                bool tudo;
+                if(busca == 0) {
+                    tudo = true;
                     busca = cache->historico.size();
-                for(int i = 1; i < busca; i++) {
+                } else 
+                    tudo = false;
+                for(int i = 1; i <= busca; i++) {
                     ExibirHistorico(cache, i);
                     parar(150);
                 }
-                ExibirHistorico(cache, 0);
+                if(tudo)
+                    ExibirHistorico(cache, 0);
                 break;
 
             case 5:     //Executar script
